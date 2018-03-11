@@ -1,0 +1,16 @@
+<ion-view view-title="Favorites" id="favorites">
+	<ion-content>
+		<div class="modalInnerContainer isFav" ng-repeat="favorite in favorites">
+			<div class="modalText" on-double-tap="removeFromFavorites(favorite)">
+				<span class="cameraTitle">{{ favorite.description }}</span>
+				<span class="cameraAction">DOUBLE TAP TO REMOVE FROM FAVORITES</span> 
+			</div>
+			<img ng-src="http://ai-no-kea.com/hitrafficcams/proxy/image/?url={{ favorite.cameraimageurl }}" />
+		</div>
+		<div class="modalInnerContainer" ng-if="!favorites.length">
+			<div class="modalText">
+				<strong>You have no favorite cameras.  There's a sad camera out there waiting to be someone's favorite.  Go to the map and pick one.</strong>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

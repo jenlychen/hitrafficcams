@@ -1,0 +1,11 @@
+<ion-modal-view class="closureModal">
+	<div class="{{ activeIsland }}">
+		<ion-header-bar>
+			<h1 class="title">{{ closureTitle }} Closures</h1>
+			<button class="button button-clear" ng-click="modal.hide()"><i class="ion-close"> </i></button>
+		</ion-header-bar>
+		<ion-content>
+			<div ng-bind-html="closure"> </div>
+		</ion-content>	
+	</div>
+</ion-modal-view>

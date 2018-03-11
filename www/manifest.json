@@ -1,0 +1,12 @@
+
+{
+  "name": "Hawaii Traffic Cams",
+  "short_name": "HI Traffic Cams",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "icon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

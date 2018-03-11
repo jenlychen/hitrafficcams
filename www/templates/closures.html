@@ -1,0 +1,13 @@
+<ion-view view-title="Closures" id="closures">
+	<ion-content>
+		<div class="islandContainer" ng-class="{'half': island.slug !== 'weekend'}" ng-repeat="island in islands">
+			<div class="island card fade-up" ng-click="showClosures(island.slug, island.name)" ng-class="island.slug" style="-webkit-animation-delay: 0.2s">
+				<img ng-src="img/closures/{{ island.slug }}.png" />
+				<div class="text">
+					<h1 class="title">{{ island.name }}</h1>
+					<span>{{ island.nick }}</span>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,592 @@
+/*=FONTS
+================================================================================*/
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+         url('../fonts/Roboto-Regular.woff') format('woff'),
+         url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+         url('../fonts/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* VARIABLES
+====================================================================== */
+$primaryColor: rgba(30,139,195,1.0);
+$whiteColor: rgba(255,255,255,1.0);
+$textColor: rgba(51,51,51,1.0);
+
+/* OVERRRIDES
+====================================================================== */
+.bar-stable {
+	background-color: $primaryColor !important;
+	
+	.title {
+		color: $whiteColor !important;
+	}
+	
+	.button {
+		color: $whiteColor !important;
+	}
+}
+
+ion-side-menu {
+	.bar-stable {
+		background-color: rgba(34,49,63,1.0) !important;
+		background-image: none !important;
+	}
+	
+	.scroll-content {
+		background-color: rgba(34,49,63,1.0) !important;
+		border: none !important;
+	}
+	
+	.item {
+		border-color: rgba(34,49,63,1.0) !important;
+		background-color: rgba(34,49,63,1.0) !important;
+		margin: 0;
+		
+		a {
+			background-color: rgba(34,49,63,1.0) !important;
+			color: $whiteColor;
+			font-weight: bold;
+			padding: 1.5em 0 !important;
+			text-align: center !important;
+			border: none !important;
+			margin: 0;
+		}
+	}
+	
+	.title.title-left {
+		text-align: center !important;
+	}
+}
+
+.platform-android .bar .title {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+/* GLOBAL
+====================================================================== */
+* {
+	font-family: 'roboto';
+}
+
+body {
+	font-family: 'roboto';
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	color: rgba(51,51,51,1.0);
+}
+
+h1, h2, h3, h4 {
+	font-family: 'roboto';
+	font-weight: 400;
+}
+
+/* MENU
+====================================================================== */
+ion-side-menu {
+	i {
+		font-size: 2em;
+	}
+	
+	span {
+		margin-top: 0.2em;
+		display: block;
+	}
+}
+
+/* MAP
+====================================================================== */
+#map {
+	.scroll {
+		height: 100%;
+	}
+	
+	#mapContainer {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* WARNING MODAL
+====================================================================== */
+#warningModal {
+	text-align: center;
+	background-color: rgba(44,62,80,1.0);
+	
+
+	.scroll {
+		padding: 1em;
+	}
+	
+	h1 {
+		margin-top: 1em;
+		font-size: 2.5em;
+		color: $whiteColor;
+		font-weight: bold;
+	}
+	
+	img {
+		width: 150px;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	
+	p {
+		font-weight: bold;
+		color: $whiteColor;
+	}
+	
+	button {
+		margin-top: 1.5em;
+		border: 0;
+		background-color: $primaryColor;
+		color: $whiteColor;
+		font-weight: bold;
+		padding: 0.5em 1em;
+		border-radius: 3px;
+		font-size: 1.2em;
+	}
+}
+
+/* CAMERA MODAL
+====================================================================== */
+#cameraModal {
+	background-color: transparent;
+	
+	.modalOuterContainer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		
+		.modalInnerContainer.isFav {
+			background-color: rgba(35,143,109,1.0);
+		}
+		
+		.modalInnerContainer.noFav {
+			background-color: rgba(205,67,84,1.0);
+		}
+		
+		.modalInnerContainer {
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			border-radius: 3px;
+			box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+			
+			img {
+				width: 100%;
+				border-radius: 0 0 3px 3px;
+				display: block;
+			}
+			
+			.modalText {
+				padding: 15px 10px;
+				
+				.cameraTitle {
+					font-weight: bold;
+					font-size: 1.5em;
+					color: $whiteColor;
+					display: block;
+				}
+				
+				.cameraAction {
+					display: block;
+					margin-top: 0.5em;
+					color: $whiteColor;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+/* FAVORITES
+====================================================================== */
+#favorites {
+	background-color: rgba(44,62,80,1.0);
+	
+	.scroll {
+		padding-top: 10px;
+		background-color: rgba(44,62,80,1.0);
+	}
+	
+	.modalInnerContainer {
+		background-color: $whiteColor;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		border-radius: 3px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		
+		img {
+			width: 100%;
+			border-radius: 0 0 3px 3px;
+			display: block;
+		}
+		
+		.modalText {
+			padding: 15px 10px;
+			
+			.cameraTitle {
+				font-weight: bold;
+				font-size: 1.5em;
+				color: $whiteColor;
+				display: block;
+			}
+			
+			.cameraAction {
+				display: block;
+				margin-top: 0.5em;
+				color: $whiteColor;
+				font-weight: bold;
+			}
+		}
+	}
+	
+	.modalInnerContainer.isFav {
+		background-color: rgba(35,143,109,1.0);
+	}
+}
+
+/* CLOSURES
+====================================================================== */
+#closures {
+	background-color: rgba(44,62,80,1.0);
+	
+	.scroll {
+		background-color: rgba(44,62,80,1.0);
+	}
+	
+	.islandContainer.half {
+		width: 50%;
+		display: inline-block;
+		
+		.island {
+			margin-top: 0;
+			margin-left: 5px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+	}
+	
+	.islandContainer:nth-child(odd) {
+		.island {
+			margin-right: 10px;
+		}
+	}
+	
+	.islandContainer:nth-child(even) {
+		.island {
+			margin-left: 10px;
+		}
+	}
+	
+	.island {
+		margin-top: 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+		position: relative;
+		border-radius: 3px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		height: 180px;
+		
+		img {
+			width: 100%;
+		}
+		
+		.text {
+			position: absolute;
+			font-weight: bold;
+			bottom: 10px;
+			left: 10px;
+			
+			.title {
+				margin-bottom: 0;
+				color: rgba(255,255,255,1.0) !important;
+			}
+			
+			span {
+				font-weight: 400;
+				color: rgba(255,255,255,1.0) !important;
+			}
+		}
+	}
+	
+	.weekend {
+		background: $primaryColor !important;
+	}
+	
+	.oahu {
+		background: rgba(255,179,0,1.0) !important;
+	}
+	
+	.kauai {
+		background: rgba(142,36,170,1.0) !important;
+	}
+	
+	.hawaii {
+		background: rgba(229,57,53,1.0) !important;
+	}
+	
+	.maui {
+		background: rgba(216,27,96,1.0) !important;
+	}
+	
+	.lanai {
+		background: rgba(351,140,0,1.0) !important;
+	}
+	
+	.molokai {
+		background: rgba(67,160,71,1.0) !important;
+	}
+}
+
+.closureModal {
+	ion-header-bar {
+		.title {
+			color: rgba(255,255,255,1.0) !important;
+			font-weight: 500 !important;
+			text-align: left;
+			left: 10px !important;
+		}
+		
+		.button {
+			color: $whiteColor !important;
+			margin-right: 10px;
+		}
+	}
+	
+	ion-content {
+		color: rgba(51,51,51,1.0);
+		padding: 20px;
+	}
+	
+	.weekend ion-header-bar {
+		background: $primaryColor !important;
+	}
+	
+	.oahu ion-header-bar {
+		background: rgba(255,179,0,1.0) !important;
+	}
+	
+	.kauai ion-header-bar {
+		background: rgba(142,36,170,1.0) !important;
+	}
+	
+	.hawaii ion-header-bar {
+		background: rgba(229,57,53,1.0) !important;
+	}
+	
+	.maui ion-header-bar {
+		background: rgba(216,27,96,1.0) !important;
+	}
+	
+	.lanai ion-header-bar {
+		background: rgba(351,140,0,1.0) !important;
+	}
+	
+	.molokai ion-header-bar {
+		background: rgba(67,160,71,1.0) !important;
+	}
+}
+
+/* INCIDENTS
+====================================================================== */
+#incidents {
+	background-color: rgba(44,62,80,1.0);
+	
+	.scroll {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgba(44,62,80,1.0);
+	}
+	
+	.incidentContainer {
+		position: relative;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+		border-radius: 3px;
+		margin: 5px 10px;
+		background-color: $whiteColor;
+		
+		.col-20 {
+			text-align: center;
+		}
+		
+		.userImage {
+			margin-top: 5px;
+			border-radius: 3px;
+		}
+		
+		.entityImage {
+			width: 100%;
+			border-radius: 3px 3px 0 0;
+		}
+		
+		.name {
+			font-weight: bold;
+		}
+		
+		.screenName {
+			color: rgba(178,178,178,1.0);
+			font-size: 0.9em;
+		}
+		
+		.incidentText {
+			color: $textColor;
+		}
+		
+		.entityUrl {
+			display: block;
+			margin-top: 1em;
+			color: $primaryColor;
+			font-weight: bold;
+			text-decoration: none;
+			font-size: 0.9em;
+			text-transform: uppercase;
+		}
+		
+		.date {
+			margin-top: 1em;
+			display: block;
+			font-size: 0.8em;
+			color: rgba(178,178,178,1.0);
+		}
+		
+		.twitterIcon {
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+			color: rgba(51,204,255,1.0);
+		}
+	}
+}
+
+/* SETTINGS
+====================================================================== */
+#settings {
+	background-color: rgba(44,62,80,1.0);
+	
+	.scroll {
+		background-color: rgba(44,62,80,1.0);
+	}
+	
+	.settingsSection {
+		padding: 15px;
+		
+		h2 {
+			color: rgba(255,255,255,1.0);
+			font-family: 'roboto';
+			font-size: 1.3em;
+			font-weight: bold;
+		}
+	}
+	
+	#startup {
+		.col {
+			text-align: center;
+			color: rgba(255,255,255,0.3);
+		}
+		
+		 .col.active {
+			color: rgba(255,255,255,1.0);
+		}
+		
+		i {
+			font-size: 2em;
+		}
+		
+		span {
+			display: block;
+			font-size: 0.9em;
+			font-weight: 500;
+		}
+	}
+	
+	#showTraffic {
+		.col {
+			text-align: center;
+			color: rgba(255,255,255,0.3);
+		}
+		
+		.col.active {
+			color: rgba(255,255,255,1.0);
+		}
+		
+		i {
+			font-size: 2em;
+		}
+	}
+	
+	#closure {
+		label {
+			background: rgba(44,62,80,1.0) !important;
+			color: rgba(255,255,255,1.0);
+			border: 0;
+			
+			.input-label {
+				color: rgba(255,255,255,1.0);
+				font-weight: 500;
+			}
+			
+			select {
+				background: rgba(44,62,80,1.0) !important;
+				color: rgba(255,255,255,1.0);
+				font-weight: 500; 
+			}
+		}
+	}
+	
+	#version {
+		span {
+			color: $whiteColor;
+			font-weight: bold;
+		}
+	}
+	
+	#raptor {
+		.col {
+			text-align: center;
+			color: rgba(255,255,255,1.0);
+		}
+		
+		i {
+			font-size: 2em;
+		}
+		
+		span {
+			display: block;
+			font-size: 0.9em;
+			font-weight: 500;
+		}
+	}
+}
+
+.raptorModal {
+	background: transparent;
+	
+	.scroll {
+		height: 100%;
+	}
+	
+	img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 80%;
+		z-index: 5000;
+	}
+}

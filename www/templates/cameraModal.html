@@ -1,0 +1,17 @@
+<ion-modal-view id="cameraModal" ng-click="closeModal()">
+	<ion-content scroll="false">
+		<div class="modalOuterContainer">
+			<div class="modalInnerContainer" ng-class="{'isFav': camera.isFav, 'noFav': !camera.isFav}" ng-click="$event.stopPropagation()">
+				<div class="modalText" on-double-tap="addToFavorites(camera)" ng-if="!camera.isFav">
+					<span class="cameraTitle">{{ camera.description }}</span>
+					<span class="cameraAction">DOUBLE TAP TO ADD TO FAVORITES</span> 
+				</div>
+				<div class="modalText" on-double-tap="removeFromFavorites(camera)" ng-if="camera.isFav">
+					<span class="cameraTitle">{{ camera.description }}</span>
+					<span class="cameraAction">DOUBLE TAP TO REMOVE FROM FAVORITES</span> 
+				</div>
+				<img ng-if="camera.cameraimageurl" ng-src="http://ai-no-kea.com/hitrafficcams/proxy/image/?url={{ camera.cameraimageurl }}" ng-click="closeModal()" />
+			</div>
+		</div>
+	</ion-content>
+</ion-modal-view>

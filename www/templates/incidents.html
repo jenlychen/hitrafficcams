@@ -1,0 +1,26 @@
+<ion-view view-title="Incidents" id="incidents">
+	<ion-content>
+		<div class="incident" ng-repeat="incident in incidents">
+			<div class="incidentContainer">
+				<img ng-src="{{ incident.entity | trustUrl }}" ng-if="incident.entity && incident.entityType === 'photo'" class="entityImage" />
+				<div class="row">
+					<div class="col col-20">
+						<img ng-src="{{ incident.userImage | trustUrl }}" class="userImage" />
+					</div>
+					<div class="col col-80">
+						<span class="name">{{ incident.name }}</span> <span class="screenName">@{{ incident.screenName }}</span>
+						<br />
+						<span class="incidentText">{{ incident.text }}</span>
+						<div ng-if="incident.entity && incident.entityType == 'url'">
+							<a href="" class="entityUrl" ng-click="goToURL(incident.entity)">Open Link</a>
+						</div>
+						<span class="date"><i class="ion-android-time"> </i> <span ng-bind="incidentDate(incident.date)"></span>
+						<div class="twitterIcon">
+							<i class="ion-social-twitter"> </i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

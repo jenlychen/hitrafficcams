@@ -1,0 +1,66 @@
+<ion-view view-title="Settings" id="settings">
+	<ion-content>
+		<div class="settingsSection" id="startup">
+			<h2>Start-Up Screen</h2>
+			<div class="row">
+				<div class="col col-25" ng-click="toggleFavOnStart('map')" ng-class="{active : (!favOnStart || favOnStart == 'map')}">
+					<i class="ion-map"> </i>
+					<span>Map</span>
+				</div>
+				<div class="col col-25" ng-click="toggleFavOnStart('favorites')" ng-class="{active : favOnStart == 'favorites'}">
+					<i class="ion-android-star"> </i>
+					<span>Favorites</span>
+				</div>
+				<div class="col col-25" ng-click="toggleFavOnStart('closures')" ng-class="{active : favOnStart == 'closures'}">
+					<i class="ion-alert-circled"> </i>
+					<span>Closures</span>
+				</div>
+				<div class="col col-25" ng-click="toggleFavOnStart('incidents')" ng-class="{active : favOnStart == 'incidents'}">
+					<i class="ion-android-car"> </i>
+					<span>Incidents</span>
+				</div>
+			</div>
+		</div>
+		<div class="settingsSection" id="showTraffic">
+			<h2>Show Traffic on Map</h2>
+			<div class="row">
+				<div class="col col-33" ng-click="showTraffic('true')" ng-class="{active : showTrafficOption == 'true'}">
+					<i class="ion-checkmark"> </i>
+				</div>
+				<div class="col col-33" ng-click="showTraffic('false')" ng-class="{active : (!showTrafficOption || showTrafficOption == 'false')}">
+					<i class="ion-close"> </i>
+				</div>
+			</div>
+		</div>
+		<div class="settingsSection" id="closure">
+			<h2>Show Island Closures by Default</h2>
+			<label class="item item-input item-select">
+				<div class="input-label">
+					Island
+				</div>
+				<select ng-change="setClosureIsland(closureIsland)" ng-model="closureIsland" ng-options="island.slug as island.name for island in islands"></select>
+			</label>
+		</div>
+		<div class="settingsSection" id="raptor" ng-if="hasRaptor">
+			<h2>Feed the Raptor</h2>
+			<div class="row">
+				<div class="col col-33" ng-click="raptorize()">
+					<i class="ion-pizza"> </i>
+					<span>Pizza</span>
+				</div>
+				<div class="col col-33" ng-click="raptorize()">
+					<i class="ion-icecream"> </i>
+					<span>Ice Cream</span>
+				</div>
+				<div class="col col-33" ng-click="raptorize()">
+					<i class="ion-beer"> </i>
+					<span>Beer</span>
+				</div>
+			</div>
+		</div>
+		<div class="settingsSection" id="version" ng-click="raptorPress(raptorCount)">
+			<h2>About</h2>
+			<span>HI Traffic Cams (version 1.0.2)</span>
+		</div>
+	</ion-content>
+</ion-view>
