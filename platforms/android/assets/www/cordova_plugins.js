@@ -209,11 +209,10 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-dialogs": "1.3.2",
-    "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-file": "4.3.2",
-    "cordova-plugin-media": "3.0.0",
-    "cordova-plugin-whitelist": "1.3.2"
+    "cordova-plugin-whitelist": "1.3.2",
+    "cordova-plugin-dialogs": "2.0.1",
+    "cordova-plugin-file": "6.0.1",
+    "cordova-plugin-media": "5.0.2"
 };
 // BOTTOM OF METADATA
 });

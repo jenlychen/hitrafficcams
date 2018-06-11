@@ -1,17 +1,22 @@
 {
-    "name": "com.ainokea.hitrafficcams",
-    "version": "1.0.2",
-    "displayName": "HI Traffic Cams",
-    "cordova": {
-        "platforms": [
-            "android"
-        ],
-        "plugins": {
-            "cordova-plugin-whitelist": {}
-        }
-    },
-    "dependencies": {
-        "cordova-android": "~6.2.3",
-        "cordova-plugin-whitelist": "1"
+  "name": "com.ainokea.hitrafficcams",
+  "version": "1.0.2",
+  "displayName": "HI Traffic Cams",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-media": {}
     }
+  },
+  "dependencies": {
+    "cordova-android": "^6.3.0",
+    "cordova-plugin-dialogs": "^2.0.1",
+    "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-media": "^5.0.2",
+    "cordova-plugin-whitelist": "1"
+  }
 }

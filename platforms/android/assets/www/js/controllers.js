@@ -1,7 +1,8 @@
 angular.module('starter.controllers', [])
-.controller('MapCtrl', function($scope, $rootScope, $http, $ionicLoading, $ionicModal, alertServices) {
+.controller('MapCtrl', function($scope, $rootScope, $http, $ionicLoading, $ionicModal, $ionicSideMenuDelegate, alertServices) {
 	$scope.$on('$ionicView.afterEnter', function() {
 		ionic.trigger('resize');
+		$ionicSideMenuDelegate.canDragContent(false);
 	});
 	
 	// center map (honolulu)

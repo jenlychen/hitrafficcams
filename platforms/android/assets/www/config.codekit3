@@ -238,6 +238,14 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/lib\/ionic\/bower.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/lib\/ionic\/bower-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/lib\/ionic\/css\/ionic.css": {
 		"aP": 1,
 		"bl": 0,
@@ -285,96 +293,6 @@
 		"oA": 2,
 		"oAP": "\/lib\/ionic\/fonts\/ionicons.woff",
 		"oF": 0
-		},
-	"\/lib\/ionic\/js\/angular-ui\/angular-ui-router.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular-ui\/min\/angular-ui-router-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular-ui\/angular-ui-router.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular-ui\/min\/angular-ui-router.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-animate.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-animate-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-animate.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-animate.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-resource.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-resource-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-resource.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-resource.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-sanitize.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-sanitize-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular-sanitize.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-sanitize.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/lib\/ionic\/js\/angular\/angular.min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/lib\/ionic\/js\/angular\/min\/angular.min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
 		},
 	"\/lib\/ionic\/js\/ionic-angular.js": {
 		"ft": 64,
@@ -429,6 +347,24 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/lib\/ionic\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/lib\/ionic\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/lib\/ionic\/scss\/_action-sheet.scss": {
 		"aP": 0,
@@ -950,10 +886,10 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/lib\/ionic\/version.json": {
+	"\/lib\/ionic\/scss\/tsconfig.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "\/lib\/ionic\/version-min.json",
+		"oAP": "\/lib\/ionic\/scss\/tsconfig-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
